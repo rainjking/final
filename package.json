@@ -13,5 +13,8 @@
   ],
   "author": "rainjking",
   "license": "GNU",
-  "get repository":"https://github.com/rainjking/final"
+  "get repository": "https://github.com/rainjking/final",
+  "dependencies": {
+    "express": "^4.17.2"
+  }
 }
