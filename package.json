@@ -12,5 +12,6 @@
     "express"
   ],
   "author": "rainjking",
-  "license": "ISC"
+  "license": "GNU",
+  "get repository":"https://github.com/rainjking/final"
 }
