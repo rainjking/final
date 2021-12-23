@@ -8,6 +8,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var session = require('express-session');
 global.database = require('./database/mongo');
+global.blogs = require('./database/mongo_blogs');
 var app = express();
 
 // view engine setup
@@ -40,6 +41,8 @@ app.use('/', indexRouter);
 app.use('/register', indexRouter);
 app.use('/login', indexRouter);
 app.use('/home', indexRouter);
+app.use('/blogs', indexRouter);
+app.use('/write', indexRouter);
 app.use('/users', usersRouter);
 app.use('/logout', indexRouter);
 

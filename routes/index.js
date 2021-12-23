@@ -87,5 +87,27 @@ router.route('/logout').get(function(req, res) {
   	res.redirect("/");	
   
 });
+router.get('/write',function(req,res){
+	console.log('req!!!');
+	console.log(req.Url)
+	var data={ 'username':req.query.username,
+	'title':req.query.title,
+	'content':req.query.content
+	};
+	console.log(data);	
+	var User=global.blogs;
+	
+			User.create(data,function(err,doc){
+				if(err){res.send(500);
+					console.log(err);
+				}
+				else{
+					
+					res.send(200);
+					res.end();
+				}
+			});
+		
+});
 
 module.exports = router;

@@ -5,12 +5,9 @@ db.on('error',function(error){
 });
 
 var mongooseSchema=new mongoose.Schema({
-	name:{type:String},
-	password:{type:String}
+	username:{type:String},
+	title:{type:String},
+	content:{type:String}
 });
-mongooseSchema.methods.findByName=function(name,callback){
-	return this.model('user').find({name:name},callback);
-}
-var mongooseModel=db.model('user',mongooseSchema);
-
+var mongooseModel=db.model('blogs',mongooseSchema);
 module.exports=mongooseModel;
