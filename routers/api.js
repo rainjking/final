@@ -1,7 +1,3 @@
-/**
- * Created by zhangyi on 2017/5/25.
- */
-
 /*
  *   api 模块//接口路由
  *   /                            首页
@@ -41,7 +37,7 @@ routerApi.post('/user/register', function (req, res, next) {
     var username = req.body.username;
     var password = req.body.password;
     var repassword = req.body.repassword;
-
+    
     //用户名判空
     if (username === '') {
         responseData.code = '1';
@@ -111,9 +107,6 @@ routerApi.post('/user/login', function (req, res, next) {
             return;
         }
         // else {
-        //此处登录验证成功，进入用户首页有两种方式：
-        //1、前端根据返回的成功数据进行Url重定向实现//这样相当于二次请求服务器 TODO 思考
-        //2、后台 用redirect 进行路由重定向
         // res.redirect('/');
         responseData.code = '0';
         responseData.message = '成功';

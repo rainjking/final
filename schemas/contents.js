@@ -1,13 +1,3 @@
-/**
- * Created by zhangyi on 2017/6/13.
- */
-
-
-/*
- *n内容的表结构
- *
- * */
-
 var mongoose = require('mongoose');
 
 var schema = new mongoose.Schema({

@@ -1,6 +1,3 @@
-/**
- * Created by zhangyi on 2017/5/25.
- */
 
 /*
  *   admin 模块//管理模块
@@ -48,19 +45,7 @@ routerAdmin.get('/', function (req, res, next) {
 
 //用户管理
 routerAdmin.get('/user', function (req, res, next) {
-    // 从数据库中读取所有用户数据
-    /*
-     *   sort() 可对字段指定排序 传值 -1降序 1 升序
-     *   对数据进行分页
-     *   limit(number) 限制从数据库中取出条数
-     *   skip(number) 忽略数据的条数
-     *
-     *   eg:每页显示2条
-     *   第一页：1-2 skip 0  -> 当前页 -1 * limit
-     *   第二页：3-4 skip 2 ->
-     *   ...
-     *
-     * */
+    
     // var page = 1;
     // console.log(req.query.page);
     var reqPage = Number((req.query.page) === undefined ? 0 : req.query.page);
@@ -273,7 +258,7 @@ routerAdmin.get('/content', function (req, res, next) {
     // 从数据库中读取所有分类数据
     var reqPage = Number((req.query.page) === undefined ? 0 : req.query.page);
     var page = reqPage <= 0 ? 1 : reqPage;
-    var limit = 2;
+    var limit = 10;
     var pages = 0;
     var skip = (page - 1) * limit;
     //

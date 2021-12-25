@@ -1,7 +1,3 @@
-/**
- * Created by zhangyi on 2017/5/25.
- */
-
 /*
  *   main 模块
  *  /                首页
