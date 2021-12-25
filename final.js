@@ -57,7 +57,7 @@
          return;
      }
      else {
-         app.listen(10810, '172.21.17.144');
+         app.listen(10810);
          console.log('Success');
      }
  });
