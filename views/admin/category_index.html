@@ -1,9 +1,7 @@
-<!--继承 layout 模板 复用头部尾部等页面区域-->
 {% extends 'layout.html' %}
 
 {% block main %}
 <div class="jumbotron">
-    <!--用户列表-->
     <ol class="breadcrumb">
         <li><a href="#">管理首页</a></li>
         <li><span></span>版块列表</li>
@@ -12,13 +10,11 @@
     <h3>版块列表:</h3>
     <hr>
     <table class="table table-hover table-striped">
-        <!-- 可用 tr>th*3 生成对应行列 -->
         <tr>
             <th>ID</th>
             <th>版块名称</th>
             <th>操作</th>
         </tr>
-        <!---->
         {% for category in categories %}
         <tr>
             <td>{{ category._id.toString() }}</td>
@@ -30,7 +26,6 @@
         </tr>
         {% endfor %}
     </table>
-    <!--分页-->
     <nav aria-label="...">
         <ul class="pager">
             <li class="previous"><a href="/admin/category?page={{ page - 1 }}">&larr;</span>上一页</a></li>

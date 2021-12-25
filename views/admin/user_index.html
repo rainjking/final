@@ -1,9 +1,7 @@
-<!--继承 layout 模板 复用头部尾部等页面区域-->
 {% extends 'layout.html' %}
 
 {% block main %}
 <div class="jumbotron">
-    <!--用户列表-->
     <ol class="breadcrumb">
         <li><a href="#">管理首页</a></li>
         <li><span></span>用户列表</li>
@@ -12,14 +10,12 @@
     <h3>用户列表:</h3>
     <hr>
     <table class="table table-hover table-striped">
-        <!-- 可用 tr>th*3 生成对应行列 -->
         <tr>
             <th>ID</th>
             <th>用户名</th>
             <th>密码</th>
             <th>是否是超级管理员</th>
         </tr>
-        <!---->
         {% for user in users %}
         <tr>
             <td>{{ user._id.toString() }}</td>
@@ -33,7 +29,6 @@
         </tr>
         {% endfor %}
     </table>
-    <!--分页-->
     <nav aria-label="...">
         <ul class="pager">
             <li class="previous"><a href="/admin/user?page={{ page - 1 }}">&larr;</span>上一页</a></li>
