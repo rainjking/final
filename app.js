@@ -41,7 +41,6 @@
          }
      }
      else {
-         console.log('不存在用户cookie 数据！');
          next();
      }
  });
