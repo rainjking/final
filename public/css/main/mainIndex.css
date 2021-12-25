@@ -1,7 +1,4 @@
-/*
-    博客首页 Style
-    ...
-*/
+
 
 .main-wrapper {
     background: #444 url("../../images/main/index.jpeg");
@@ -12,7 +9,6 @@
     overflow: hidden;
 }
 
-/*header*/
 header {
     background: rgba(0, 0, 0, 0.2);
     height: 150px;
@@ -26,7 +22,7 @@ header p {
     text-align: center;
 }
 
-/*nav*/
+
 nav {
     height: 50px;
     background: rgba(225, 225, 225, 0.4);
@@ -65,9 +61,7 @@ nav ul li a:hover {
     border-bottom: 2px solid #006699;
 }
 
-/*content*/
 .content-wrapper {
-    /*background: rgba(225, 225, 225, 0.6);*/
     width: 80%;
     margin: 10px auto;
     height: 600px;
@@ -77,8 +71,6 @@ nav ul li a:hover {
 .content-wrapper .leftModule {
     width: 72%;
     margin: 10px 12px;
-    /*border-width: 1px;*/
-    /*border-style: solid;*/
     float: left;
 }
 
@@ -95,8 +87,6 @@ nav ul li a:hover {
     width: 23%;
     height: 500px;
     margin: 15px 10px 15px 0px;
-    /*border-width: 1px;*/
-    /*border-style: solid;*/
     float: right;
 
 }
@@ -110,7 +100,6 @@ nav ul li a:hover {
     background: rgba(225, 225, 225, 0.6)
 }
 
-/*leftModule 文章列表区域*/
 .leftModule .leftBox .articleTitle {
     text-align: center;
     color: #006699;
@@ -163,7 +152,6 @@ nav ul li a:hover {
     color: #df6b31;
 }
 
-/*评论区域*/
 .leftModule .message {
     min-height: 150px !important;
 }
@@ -210,7 +198,6 @@ em{
     margin:20px 15px !important;
 }
 
-/*rightModule 注册/登录/热门话题 等等区域*/
 .rightModule .rightBox .title {
     text-align: center;
     background: #006699;
@@ -255,9 +242,7 @@ em{
     text-align: center;
 }
 
-/*
-    评论内容相关显示
-*/
+
 .message .messageList{
     margin:20px 15px;
     min-height: 40px;
@@ -274,7 +259,6 @@ em{
     color: #1b6d85;
 }
 
-/*footer*/
 footer {
     height: 60px;
     background: rgba(0, 0, 0, 0.5);
@@ -283,9 +267,6 @@ footer {
     color: #fff;
 }
 
-/*
-    分页
-*/
 .pager li {
     display: inline-block;
     color: #006699;
@@ -323,11 +304,6 @@ footer {
     float: right;
 }
 
-/*
-    复用样式处理
-*/
-
-/*控制文本超出宽度显示 ...*/
 .ellipsis {
     white-space: nowrap;
     overflow: hidden;

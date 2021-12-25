@@ -1,30 +1,22 @@
-/*
- *   评论相关Js
- *
- * */
 
-//前台分页
-var limit = 4;  //每页显示的数目
-var page = 1;//当前页数
-var pages = 0;//总页数
+var limit = 5; 
+var page = 1;
+var pages = 0;
 
 var comments = [];
 
 $(function () {
-    //评论button点击时提交评论数据
     $("#messageBtn").on('click', function () {
         var url = '/api/comment/post';
         var postData = {
             contentID: $("#contentID").val(),
             comment: $("#messageContent").val()
         };
-        //
         $.ajax({
             type: 'post',
             url: url,
             data: postData,
             success: function (resData) {
-                // console.log(resData);
                 $("#messageContent").val('');
                 comments = resData.data.comments.reverse();
                 renderComments();
@@ -35,8 +27,6 @@ $(function () {
         });
     });
 });
-
-//每次页面重载时获取一下该文章的所有评论
 $.ajax({
     type: 'get',
     url: '/api/comment',
@@ -44,7 +34,6 @@ $.ajax({
         contentID: $('#contentID').val()
     },
     success: function (resData) {
-        // console.log(resData);
         comments = resData.data;
         renderComments();
     },
@@ -52,24 +41,17 @@ $.ajax({
         alert(err);
     }
 });
-//通过实践委托绑定上一页/下一页 a标签点击
 $('.pager').delegate('a', 'click', function () {
-    // alert('点击了 上/下 一页');
     if ($(this).parent().hasClass("previous")) {
-        //上一页
         page--;
     } else {
-        //下一页
         page++;
     }
     renderComments(comments);
 });
-
-//渲染当前内容所有的评论内容
 function renderComments() {
     var length = 0;
     if (comments !== null) length = comments.length;
-    //用于处理评论分页
     pages = Math.ceil(length / limit);
     $lis = $(".pager li");
     $lis.eq(1).html(page + '/' + pages);
@@ -90,7 +72,6 @@ function renderComments() {
         $lis.eq(2).html('<a href="javascript:;">下一页</a>')
     }
 
-    //渲染评论列表
     $("#messageCount").html(length);
     var htmlStr = '';
     if (comments.length === 0) {
