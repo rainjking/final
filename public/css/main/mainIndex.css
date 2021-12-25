@@ -51,13 +51,13 @@ nav ul li a {
 
 nav ul a.active {
     cursor: pointer;
-    color: #006699;
+    color: #ecdd0c;
     border-bottom: 2px solid #006699;
 }
 
 nav ul li a:hover {
     cursor: pointer;
-    color: #006699;
+    color: #ecdd0c;
     border-bottom: 2px solid #006699;
 }
 
@@ -102,7 +102,7 @@ nav ul li a:hover {
 
 .leftModule .leftBox .articleTitle {
     text-align: center;
-    color: #006699;
+    color: #eed2c0;
     padding: 6px 0px;
     width: 60%;
     margin: 0 auto;
@@ -193,14 +193,14 @@ em{
 
 .bgDanger{
     text-align: center;
-    color: #fff;
-    background: #ccc;
+    color: rgb(56, 53, 53);
+    background: rgb(29, 28, 28);
     margin:20px 15px !important;
 }
 
 .rightModule .rightBox .title {
     text-align: center;
-    background: #006699;
+    background: #0c0c16;
     color: #fff;
     height: 40px;
     line-height: 40px;
