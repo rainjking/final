@@ -54,8 +54,6 @@ function uploadRegisterDataFunc() {
     // TODO 表单数据前端检测等【中英文限制/信息长度/完整度...】如要在用户输入完立马检测可利用input 失去焦点事件触发
     if (username === '') {
         alert('你未输入用户名...');
-        // } else if (username.length < 4) {
-        //     alert('用户名长度需不小于4位');
     } else {
         //采用 jQuery AJax方式上传
         $.ajax({

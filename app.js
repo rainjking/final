@@ -56,21 +56,20 @@
              });
          }
          catch (e) {
-             // console.log('Cookies have some Error');
-             // next();
+             console.log('Cookies have some Error');
+             next();
          }
      }
      else {
-         // console.log('不存在用户cookie 数据！');
+         console.log('不存在用户cookie 数据！');
          next();
      }
  });
  
  //路由控制
- //根据不同功能划分模块
  app.use('/', require('./routers/main'));
  app.use('/admin', require('./routers/admin'));
- // app.use('/user', require('./routers/users'));
+ app.use('/user', require('./routers/users'));
  app.use('/api', require('./routers/api'));
  
  
@@ -83,9 +82,8 @@
      else {
          console.log('数据库连接成功');
          app.listen(10810, '172.21.17.144');
-         console.log('Server is running at http://localhost:8081');
+         console.log('Success');
      }
  });
- // app.listen(8081, 'localhost');
- // console.log('Server is running at http://localhost:8081');
+
  
